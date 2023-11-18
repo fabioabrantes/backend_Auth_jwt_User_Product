@@ -10,7 +10,7 @@ export class ListAllController{
 
     const findAllDeliveriesUseCase = new ListAllUseCase();
     const result = await findAllDeliveriesUseCase.execute(user.id);
-
+    console.log(result)
     return res.status(200).json(result);
   }
 }

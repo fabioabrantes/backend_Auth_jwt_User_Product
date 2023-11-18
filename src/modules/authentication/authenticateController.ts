@@ -8,6 +8,7 @@ export class AuthenticateController{
   async handle(req: Request, res: Response): Promise<Response>{
   
     const { email,password } = <AuthenticateDTO>req.body;
+    console.log(email);
     // instantica e chama o método do caso de uso
     const authenticateUseCase = new AuthenticateUseCase()
     const {token,user} = await authenticateUseCase.execute({email,password})
